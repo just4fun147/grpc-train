@@ -1,0 +1,19 @@
+
+syntax = "proto3";
+
+package pandugrpc;
+option java_multiple_files=true;
+option java_package="com.pandu.grpc";
+option java_outer_classname="TestProto";
+
+service TestService{
+  rpc greetings(GreetingRequest) returns (GreetingResponse);
+}
+
+message GreetingRequest {
+  string name=1;
+}
+message GreetingResponse  {
+  string message=1;
+  string name=2;
+}
